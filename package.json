@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "prebuild": "mkdir -p dist",
-    "build": "browserify -t babelify index.js |indexhtmlify --title=npmdocs >dist/index.html",
+    "build": "browserify -t babelify index.js |indexhtmlify --title=npmdocs |html-minifier --config-file=htmlminifier.rc --minify-js >dist/index.html",
     "clean": "rm -r dist"
   },
   "homepage": "https://github.com/eush77/npm-docs",
@@ -33,6 +33,7 @@
   "devDependencies": {
     "babelify": "^5.0.4",
     "browserify": "^9.0.3",
+    "html-minifier": "git://github.com/eush77/html-minifier#interactive-stdin",
     "indexhtmlify": "^1.2.0"
   }
 }
