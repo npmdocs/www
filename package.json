@@ -1,0 +1,38 @@
+{
+  "name": "npm-docs",
+  "version": "0.0.0",
+  "description": "HTML page that redirects you to npm package's homepage",
+  "author": "Eugene Sharygin <eush77@gmail.com>",
+  "private": "true",
+  "license": "MIT",
+  "scripts": {
+    "prebuild": "mkdir -p dist",
+    "build": "browserify -t babelify index.js |indexhtmlify --title=npmdocs >dist/index.html",
+    "clean": "rm -r dist"
+  },
+  "homepage": "https://github.com/eush77/npm-docs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/eush77/npm-docs"
+  },
+  "bugs": {
+    "url": "https://github.com/eush77/npm-docs/issues"
+  },
+  "keywords": [
+    "npm",
+    "package",
+    "repository",
+    "github",
+    "html",
+    "redirect",
+    "website"
+  ],
+  "dependencies": {
+    "whatwg-fetch": "^0.7.0"
+  },
+  "devDependencies": {
+    "babelify": "^5.0.4",
+    "browserify": "^9.0.3",
+    "indexhtmlify": "^1.2.0"
+  }
+}
