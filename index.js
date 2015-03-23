@@ -21,6 +21,9 @@ if (query) {
       }
     })
     .then((info) => {
+      if (!info.repository) {
+        return document.write('Package does not have a repository');
+      }
       const repo = info.repository.url.replace(/^git:/, 'http:');
       document.write(`Redirecting to ${repo}...`);
       window.location = repo;
