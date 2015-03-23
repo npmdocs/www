@@ -13,8 +13,9 @@ if (query) {
   window.fetch(url.resolve(registry, query))
     .then((response) => response.json())
     .then((info) => {
-      document.write(`Redirecting to ${info.homepage}...`);
-      window.location = info.homepage;
+      const repo = info.repository.url;
+      document.write(`Redirecting to ${repo}...`);
+      window.location = repo;
     });
 }
 else {
