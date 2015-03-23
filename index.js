@@ -12,7 +12,14 @@ const query = querystring(window.location.search.slice(1)).q;
 
 if (query) {
   window.fetch(url.resolve(registry, query))
-    .then((response) => response.json())
+    .then((response) => {
+      if (response.status >= 400) {
+        document.write(response.status < 500 ? 'Package does not exist' : 'Internal server error');
+      }
+      else {
+        return response.json();
+      }
+    })
     .then((info) => {
       const repo = info.repository.url.replace(/^git:/, 'http:');
       document.write(`Redirecting to ${repo}...`);
