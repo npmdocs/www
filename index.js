@@ -14,7 +14,7 @@ if (query) {
   window.fetch(url.resolve(registry, query))
     .then((response) => response.json())
     .then((info) => {
-      const repo = info.repository.url;
+      const repo = info.repository.url.replace(/^git:/, 'http:');
       document.write(`Redirecting to ${repo}...`);
       window.location = repo;
     });
