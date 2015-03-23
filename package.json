@@ -30,6 +30,7 @@
     "website"
   ],
   "dependencies": {
+    "es6-promise": "^2.0.1",
     "whatwg-fetch": "^0.7.0"
   },
   "devDependencies": {

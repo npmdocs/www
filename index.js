@@ -1,4 +1,5 @@
 'use strict';
+require('es6-promise').polyfill();
 require('whatwg-fetch');
 
 const url = require('url'),
