@@ -9,6 +9,7 @@
     "prebuild": "mkdir -p dist",
     "build": "browserify -t babelify index.js |indexhtmlify --title=npmdocs.github.io |html-minifier --config-file=htmlminifier.rc --minify-js >dist/index.html",
     "clean": "rm -r dist",
+    "prepublish": "npm run build",
     "deploy": "npm run build && git-directory-deploy --directory=dist --repo=out --branch=master"
   },
   "homepage": "https://github.com/npmdocs/www",
