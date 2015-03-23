@@ -10,7 +10,7 @@ const registry = 'http://npm-registry.herokuapp.com';
 const query = querystring(window.location.search.slice(1)).q;
 
 if (query) {
-  window.fetch(path.join(registry, name))
+  window.fetch(path.join(registry, query))
     .then((response) => response.json())
     .then((info) => {
       document.write(`Redirecting to ${info.homepage}...`);
