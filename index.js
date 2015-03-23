@@ -26,7 +26,7 @@ if (query) {
       }
       const repo = info.repository.url.replace(/^git:/, 'http:');
       document.write(`Redirecting to ${repo}...`);
-      window.location = repo;
+      window.location.replace(repo);
     });
 }
 else {
