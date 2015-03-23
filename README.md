@@ -4,8 +4,8 @@
 
 HTML page that redirects you to npm package's homepage.
 
-[david]: https://david-dm.org/eush77/npm-docs
-[david-badge]: https://david-dm.org/eush77/npm-docs.
+[david]: https://david-dm.org/npmdocs/www
+[david-badge]: https://david-dm.org/npmdocs/www.png
 
 ## License
 

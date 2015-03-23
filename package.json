@@ -11,13 +11,13 @@
     "clean": "rm -r dist",
     "deploy": "npm run build && git-directory-deploy --directory=dist --repo=out --branch=master"
   },
-  "homepage": "https://github.com/eush77/npm-docs",
+  "homepage": "https://github.com/npmdocs/www",
   "repository": {
     "type": "git",
-    "url": "https://github.com/eush77/npm-docs"
+    "url": "https://github.com/npmdocs/www"
   },
   "bugs": {
-    "url": "https://github.com/eush77/npm-docs/issues"
+    "url": "https://github.com/npmdocs/www/issues"
   },
   "keywords": [
     "npm",
