@@ -8,7 +8,8 @@
   "scripts": {
     "prebuild": "mkdir -p dist",
     "build": "browserify -t babelify index.js |indexhtmlify --title=npmdocs |html-minifier --config-file=htmlminifier.rc --minify-js >dist/index.html",
-    "clean": "rm -r dist"
+    "clean": "rm -r dist",
+    "deploy": "npm run build && git-directory-deploy --directory=dist --repo=out --branch=master"
   },
   "homepage": "https://github.com/eush77/npm-docs",
   "repository": {
@@ -33,6 +34,7 @@
   "devDependencies": {
     "babelify": "^5.0.4",
     "browserify": "^9.0.3",
+    "git-directory-deploy": "^1.1.0",
     "html-minifier": "git://github.com/eush77/html-minifier#interactive-stdin",
     "indexhtmlify": "^1.2.0"
   }
