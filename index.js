@@ -1,7 +1,7 @@
 'use strict';
 require('whatwg-fetch');
 
-const path = require('path'),
+const url = require('url'),
       querystring = require('querystring').parse;
 
 const registry = 'http://npm-registry.herokuapp.com';
@@ -10,7 +10,7 @@ const registry = 'http://npm-registry.herokuapp.com';
 const query = querystring(window.location.search.slice(1)).q;
 
 if (query) {
-  window.fetch(path.join(registry, query))
+  window.fetch(url.resolve(registry, query))
     .then((response) => response.json())
     .then((info) => {
       document.write(`Redirecting to ${info.homepage}...`);
