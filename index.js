@@ -3,7 +3,8 @@ require('es6-promise').polyfill();
 require('whatwg-fetch');
 
 const url = require('url'),
-      querystring = require('querystring').parse;
+      querystring = require('querystring').parse,
+      githubUrl = require('github-url-from-git');
 
 const registry = 'http://npm-registry.herokuapp.com';
 
@@ -24,7 +25,7 @@ if (query) {
       if (!info.repository) {
         return document.write('Package does not have a repository');
       }
-      const repo = info.repository.url.replace(/^git:/, 'http:');
+      const repo = githubUrl(info.repository.url);
       document.write(`Redirecting to ${repo}...`);
       window.location.replace(repo);
     });
