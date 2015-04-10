@@ -38,7 +38,7 @@
     "babelify": "^5.0.4",
     "browserify": "^9.0.3",
     "git-directory-deploy": "^1.1.0",
-    "html-minifier": "git://github.com/eush77/html-minifier#interactive-stdin",
+    "html-minifier": "^0.7.2",
     "indexhtmlify": "^1.2.0"
   }
 }
