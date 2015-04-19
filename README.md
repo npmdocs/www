@@ -2,9 +2,9 @@
 
 [![Dependency Status][david-badge]][david]
 
-HTML page that redirects you to npm package's homepage.
+This HTML page redirects you to the homepage of npm package supplied as an argument.
 
-This is basically `npm docs <package>` in a browser. If you use `http://npm.im/<package>` frequently just to get to the GitHub page, then this is for you.
+It is basically `npm docs <package>` in a browser. If you use `http://npm.im/<package>` all the time just to get to the GitHub page, then you might find this little thing useful.
 
 [david]: https://david-dm.org/npmdocs/www
 [david-badge]: https://david-dm.org/npmdocs/www.png
