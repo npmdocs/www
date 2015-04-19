@@ -31,5 +31,6 @@ if (query) {
     });
 }
 else {
-  document.write('<form method="get"><input type="text" name="q"><input type="submit" value="Go"></form>');
+  document.write('<form method="get"><input type="text" name="q"><input type="submit" value="Go"></form>' +
+                 '<small>Learn more: <a href="https://github.com/npmdocs/www">https://github.com/npmdocs/www</a></small>');
 }
