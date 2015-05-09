@@ -32,7 +32,7 @@
   "dependencies": {
     "es6-promise": "^2.0.1",
     "github-url-from-git": "^1.4.0",
-    "whatwg-fetch": "^0.7.0"
+    "whatwg-fetch": "^0.8.1"
   },
   "devDependencies": {
     "babelify": "^5.0.4",
