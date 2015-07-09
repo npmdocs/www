@@ -6,7 +6,7 @@ const url = require('url'),
       querystring = require('querystring').parse,
       githubUrl = require('github-url-from-git');
 
-const registry = 'http://npm-registry.herokuapp.com';
+const registry = 'http://104.245.32.179:3000';
 
 
 const query = querystring(window.location.search.slice(1)).q;
